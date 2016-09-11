@@ -1,0 +1,42 @@
+200	Fury Cutter	6	3	400	6
+201	Bug Bite	6	5	450	7
+202	Bite	16	6	500	7
+203	Sucker Punch	16	7	700	9
+204	Dragon Breath	15	6	500	7
+205	Thunder Shock	12	5	600	8
+206	Spark	12	7	700	8
+207	Low Kick	1	5	600	7
+208	Karate Chop	1	6	800	8
+209	Ember	9	10	1050	10
+210	Wing Attack	2	9	750	7
+211	Peck	2	10	1150	10
+212	Lick	7	5	500	6
+213	Shadow Claw	7	11	950	8
+214	Vine Whip	11	7	650	7
+215	Razor Leaf	11	15	1450	12
+216	Mud Shot	4	6	550	7
+217	Ice Shard	14	15	1400	12
+218	Frost Breath	14	9	810	7
+219	Quick Attack	18	10	1330	12
+220	Scratch	18	6	500	7
+221	Tackle	18	12	1100	10
+222	Pound	18	7	540	7
+223	Cut	18	12	1130	10
+224	Poison Jab	3	12	1050	10
+225	Acid	3	10	1050	10
+226	Psycho Cut	13	7	570	7
+227	Rock Throw	5	12	1360	15
+228	Metal Claw	8	8	630	7
+229	Bullet Punch	8	10	1200	10
+230	Water Gun	10	6	500	7
+231	Splash	10	0	1230	10
+232	Water Gun (Blastoise)	10	6	500	7
+233	Mud Slap	4	15	1350	12
+234	Zen Headbutt	13	12	1050	9
+235	Confusion	13	15	1510	14
+236	Poison Sting	3	6	575	8
+237	Bubble	10	25	2300	25
+238	Feint Attack	16	12	1040	10
+239	Steel Wing	8	15	1330	12
+240	Fire Fang	9	10	840	8
+241	Rock Smash	1	15	1410	12
