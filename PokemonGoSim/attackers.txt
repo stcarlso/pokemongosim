@@ -1,0 +1,71 @@
+Snorlax	Lick	Hyper Beam
+Snorlax	Lick	Body Slam
+Snorlax	Zen Headbutt	Hyper Beam
+Snorlax	Zen Headbutt	Body Slam
+Dragonite	Dragon Breath	Dragon Claw
+Dragonite	Dragon Breath	Hyper Beam
+Dragonite	Dragon Breath	Dragon Pulse
+Dragonite	Steel Wing	Dragon Pulse
+Lapras	Frost Breath	Blizzard
+Lapras	Ice Shard	Blizzard
+Lapras	Frost Breath	Ice Beam
+Lapras	Ice Shard	Ice Beam
+Vaporeon	Water Gun	Hydro Pump
+Vaporeon	Water Gun	Aqua Tail
+Vaporeon	Water Gun	Water Pulse
+Arcanine	Fire Fang	Fire Blast
+Arcanine	Bite	Fire Blast
+Arcanine	Fire Fang	Flamethrower
+Arcanine	Bite	Flamethrower
+Exeggutor	Zen Headbutt	Solar Beam
+Exeggutor	Zen Headbutt	Psychic
+Exeggutor	Confusion	Solar Beam
+Exeggutor	Zen Headbutt	Seed Bomb
+Slowbro	Water Gun	Psychic
+Slowbro	Water Gun	Water Pulse
+Slowbro	Water Gun	Ice Beam
+Slowbro	Confusion	Psychic
+Blastoise	Water Gun	Hydro Pump
+Blastoise	Bite	Hydro Pump
+Blastoise	Water Gun	Flash Cannon
+Blastoise	Water Gun	Ice Beam
+Gyarados	Bite	Hydro Pump
+Gyarados	Bite	Dragon Pulse
+Muk	Poison Jab	Gunk Shot
+Muk	Poison Jab	Sludge Wave
+Muk	Lick	Gunk Shot
+Muk	Lick	Sludge Wave
+Venusaur	Vine Whip	Solar Beam
+Venusaur	Vine Whip	Petal Blizzard
+Venusaur	Vine Whip	Sludge Bomb
+Venusaur	Razor Leaf	Solar Beam
+Nidoqueen	Bite	Earthquake
+Nidoqueen	Poison Jab	Earthquake
+Nidoqueen	Poison Jab	Sludge Wave
+Nidoqueen	Poison Jab	Stone Edge
+Charizard	Wing Attack	Fire Blast
+Charizard	Wing Attack	Flamethrower
+Charizard	Wing Attack	Dragon Claw
+Charizard	Ember	Fire Blast
+Wigglytuff	Pound	Hyper Beam
+Wigglytuff	Pound	Play Rough
+Wigglytuff	Feint Attack	Hyper Beam
+Wigglytuff	Pound	Dazzling Gleam
+Poliwrath	Mud Shot	Hydro Pump
+Poliwrath	Bubble	Hydro Pump
+Poliwrath	Bubble	Submission
+Poliwrath	Mud Shot	Submission
+Golduck	Water Gun	Hydro Pump
+Golduck	Water Gun	Psychic
+Clefable	Pound	Moonblast
+Clefable	Pound	Psychic
+Clefable	Zen Headbutt	Moonblast
+Nidoking	Poison Jab	Earthquake
+Nidoking	Poison Jab	Sludge Wave
+Nidoking	Poison Jab	Megahorn
+Nidoking	Fury Cutter	Earthquake
+Rhydon	Mud Slap	Earthquake
+Rhydon	Mud Slap	Stone Edge
+Rhydon	Mud Slap	Megahorn
+Dewgong	Frost Breath	Blizzard
+Dewgong	Ice Shard	Blizzard

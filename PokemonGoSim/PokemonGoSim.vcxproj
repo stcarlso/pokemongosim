@@ -177,6 +177,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="attackers.txt" />
+    <Text Include="defenders.txt" />
     <Text Include="movesBasic.txt" />
     <Text Include="movesPower.txt" />
     <Text Include="species.txt" />

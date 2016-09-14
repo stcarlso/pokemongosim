@@ -52,5 +52,11 @@
     <Text Include="movesPower.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="defenders.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="attackers.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

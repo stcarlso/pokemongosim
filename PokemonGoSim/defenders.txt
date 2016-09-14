@@ -1,0 +1,72 @@
+Lapras	Ice Shard	Ice Beam
+Lapras	Ice Shard	Blizzard
+Lapras	Frost Breath	Ice Beam
+Lapras	Ice Shard	Dragon Pulse
+Snorlax	Zen Headbutt	Hyper Beam
+Snorlax	Zen Headbutt	Body Slam
+Snorlax	Lick	Hyper Beam
+Snorlax	Lick	Body Slam
+Dragonite	Steel Wing	Dragon Pulse
+Dragonite	Dragon Breath	Dragon Pulse
+Dragonite	Steel Wing	Hyper Beam
+Dragonite	Steel Wing	Dragon Claw
+Exeggutor	Confusion	Seed Bomb
+Exeggutor	Confusion	Solar Beam
+Exeggutor	Confusion	Psychic
+Exeggutor	Zen Headbutt	Seed Bomb
+Vaporeon	Water Gun	Water Pulse
+Vaporeon	Water Gun	Aqua Tail
+Vaporeon	Water Gun	Hydro Pump
+Poliwrath	Bubble	Hydro Pump
+Poliwrath	Bubble	Submission
+Poliwrath	Bubble	Ice Punch
+Poliwrath	Mud Shot	Submission
+Wigglytuff	Pound	Play Rough
+Wigglytuff	Pound	Hyper Beam
+Wigglytuff	Feint Attack	Dazzling Gleam
+Wigglytuff	Pound	Dazzling Gleam
+Slowbro	Confusion	Psychic
+Slowbro	Confusion	Water Pulse
+Slowbro	Confusion	Ice Beam
+Slowbro	Water Gun	Water Pulse
+Arcanine	Fire Fang	Flamethrower
+Arcanine	Fire Fang	Fire Blast
+Arcanine	Bite	Flamethrower
+Arcanine	Fire Fang	Bulldoze
+Venusaur	Razor Leaf	Petal Blizzard
+Venusaur	Razor Leaf	Sludge Bomb
+Venusaur	Razor Leaf	Solar Beam
+Venusaur	Vine Whip	Petal Blizzard
+Vileplume	Razor Leaf	Petal Blizzard
+Vileplume	Razor Leaf	Solar Beam
+Vileplume	Acid	Petal Blizzard
+Vileplume	Acid	Solar Beam
+Clefable	Zen Headbutt	Dazzling Gleam
+Clefable	Pound	Dazzling Gleam
+Clefable	Zen Headbutt	Psychic
+Muk	Poison Jab	Dark Pulse
+Muk	Poison Jab	Sludge Wave
+Muk	Poison Jab	Gunk Shot
+Muk	Lick	Dark Pulse
+Victreebel	Razor Leaf	Sludge Bomb
+Victreebel	Razor Leaf	Leaf Blade
+Victreebel	Razor Leaf	Solar Beam
+Victreebel	Acid	Sludge Bomb
+Rhydon	Mud Slap	Earthquake
+Rhydon	Mud Slap	Stone Edge
+Rhydon	Rock Smash	Earthquake
+Rhydon	Mud Slap	Megahorn
+Nidoqueen	Poison Jab	Earthquake
+Nidoqueen	Poison Jab	Sludge Wave
+Nidoqueen	Poison Jab	Stone Edge
+Hypno	Confusion	Psyshock
+Hypno	Confusion	Psychic
+Hypno	Zen Headbutt	Psyshock
+Hypno	Zen Headbutt	Psychic
+Charizard	Ember	Flamethrower
+Charizard	Wing Attack	Flamethrower
+Charizard	Ember	Fire Blast
+Charizard	Wing Attack	Fire Blast
+Dewgong	Ice Shard	Aqua Jet
+Dewgong	Ice Shard	Blizzard
+Dewgong	Frost Breath	Aqua Jet

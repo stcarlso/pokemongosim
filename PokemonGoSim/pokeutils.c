@@ -1,9 +1,6 @@
 #include "stdafx.h"
 #include "pokemon.h"
 
-// Assuming dense packing?
-#define TIMELINE_BYTES (sizeof(FightEvent) * (size_t)TIMELINE_LEN)
-
 // Flags for super effective / not very effective
 #define S 1
 #define N 2
@@ -200,7 +197,13 @@ static void printMoveList(const int *data, int count) {
 
 // Clears all events from the timeline object
 void clearTimeline(Timeline *timeline) {
-	memset(timeline->data, 0, TIMELINE_BYTES);
+	FightEvent *head = &(timeline->data[0]);
+	for (uint32_t i = TIMELINE_LEN; i; i--) {
+		head->duration = 0;
+		head->time = INT_MAX;
+		head->type = 0;
+		head++;
+	}
 	timeline->exec = 0;
 	timeline->plan = 0;
 	// Not always an attack, but not null...
@@ -249,7 +252,7 @@ int getCP(const Pokemon *mon) {
 	return cp;
 }
 
-// Calculates damage of the specified move
+// Calculates damage of the specified move - the dodge is not taken into account!
 int getDamage(const Pokemon *attack, const Pokemon *defense, const Move *move, bool dodge) {
 	/* Attacker's Attack = ( base_attack + attack_IV ) * CPM
 	* Defender's Defense = ( base_defense + defense_IV ) * CPM
@@ -281,10 +284,11 @@ int getDamage(const Pokemon *attack, const Pokemon *defense, const Move *move, b
 		// Max 2 advantages
 		break;
 	}
-	int damage = 1 + (int)floor(0.5 * move->power * att * multipliers * (dodge ? MULT_DODGE :
-		1.0) / def);
+	int damage = 1 + (int)floor(0.5 * move->power * att * multipliers / def);
 #if defined(PRINT_DAMAGE) && defined(_DEBUG)
-	printf("%d to %s - %s - %s\n", damage, defSpec->name, move->name, dodge ? "Dodged!" :
+	int dodge_d = dodge ? damage * MULT_DODGE : damage;
+	if (dodge_d < 1) dodge_d = 1;
+	printf("%d to %s - %s - %s\n", dodge_d, defSpec->name, move->name, dodge ? "Dodged!" :
 		EFFECT_TEXT[effective + 2]);
 #endif
 	return damage;
@@ -341,7 +345,7 @@ int getSpeciesName(const char *name) {
 
 // Initializes the timeline object
 void initTimeline(Timeline *timeline) {
-	FightEvent *data = (FightEvent *)malloc(TIMELINE_BYTES);
+	FightEvent *data = (FightEvent *)malloc(sizeof(FightEvent) * (size_t)TIMELINE_LEN);
 	timeline->data = data;
 	if (data != NULL)
 		clearTimeline(timeline);
@@ -367,16 +371,16 @@ bool readMovesBasic() {
 	else {
 		int idx;
 		Move *move;
-		char buffer[80];
-		unsigned int sz = (unsigned int)(sizeof(buffer) - 1);
+		char buffer[BUFFER_SIZE];
 		for (int i = 0; i < MAX_MOVE_INDEX && !feof(fh); i++)
 			// Read in all move data
 			if (1 == fscanf_s(fh, "%d ", &idx) && idx < MAX_MOVE_INDEX) {
 				move = &moves[idx];
 				move->energyReq = 0;
-				if (5 == fscanf_s(fh, "%[^\t] %d %d %d %d", buffer, sz, &(move->type),
-						&(move->power), &(move->cooldown), &(move->energyGen))) {
-					move->name = copyName(buffer, 80);
+				if (5 == fscanf_s(fh, "%[^\t] %d %d %d %d", buffer, BUFFER_SIZE,
+						&(move->type), &(move->power), &(move->cooldown),
+						&(move->energyGen))) {
+					move->name = copyName(buffer, BUFFER_SIZE);
 #ifdef _DEBUG
 					printf("MOVE %s [%s] P=%d T=%d E=%d\n", move->name, TYPES[move->type],
 						move->power, move->cooldown, move->energyGen);
@@ -400,17 +404,16 @@ bool readMovesPower() {
 	else {
 		int idx;
 		Move *move;
-		char buffer[80];
-		unsigned int sz = (unsigned int)(sizeof(buffer) - 1);
+		char buffer[BUFFER_SIZE];
 		for (int i = 0; i < MAX_MOVE_INDEX && !feof(fh); i++)
 			// Read in all move data
 			if (1 == fscanf_s(fh, "%d ", &idx) && idx < MAX_MOVE_INDEX) {
 				move = &moves[idx];
 				move->energyGen = 0;
-				if (6 == fscanf_s(fh, "%[^\t] %d %d %d %d %d", buffer, sz, &(move->type),
-						&(move->power), &(move->cooldown), &(move->energyReq),
+				if (6 == fscanf_s(fh, "%[^\t] %d %d %d %d %d", buffer, BUFFER_SIZE,
+						&(move->type), &(move->power), &(move->cooldown), &(move->energyReq),
 						&(move->window))) {
-					move->name = copyName(buffer, 80);
+					move->name = copyName(buffer, BUFFER_SIZE);
 #ifdef _DEBUG
 					printf("MOVE %s [%s] P=%d T=%d E=%d\n", move->name, TYPES[move->type],
 						move->power, move->cooldown, move->energyReq);
@@ -431,15 +434,14 @@ bool readSpecies() {
 		// Uh oh
 		puts("Failed to load species data!\r");
 	else {
-		char buffer[80];
-		unsigned int sz = (unsigned int)(sizeof(buffer) - 1);
+		char buffer[BUFFER_SIZE];
 		for (int i = 0; i < NUM_SPECIES && !feof(fh); i++) {
 			// Read in all species data
 			Species *mon = &specData[i];
-			if (7 == fscanf_s(fh, "%[^\t] %d %d %d %d %d %d ", buffer, sz, &(mon->number),
-					&(mon->hp), &(mon->attack), &(mon->defense), &(mon->type[0]),
-					&(mon->type[1])))
-				mon->name = copyName(buffer, 80);
+			if (7 == fscanf_s(fh, "%[^\t] %d %d %d %d %d %d ", buffer, BUFFER_SIZE,
+					&(mon->number), &(mon->hp), &(mon->attack), &(mon->defense),
+					&(mon->type[0]), &(mon->type[1])))
+				mon->name = copyName(buffer, BUFFER_SIZE);
 			else
 				mon->name = NULL;
 			// Read learnset

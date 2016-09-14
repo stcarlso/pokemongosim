@@ -3,15 +3,15 @@
 // All PRINT_xxx switches below will do nothing in Release builds
 
 // If this is enabled, prints out messages for each damage event
-#undef PRINT_DAMAGE
+#define PRINT_DAMAGE
 // If this is enabled, prints out messages for debugging the attacker plan
-#undef PRINT_PLAN
+#define PRINT_PLAN
 // If this is enabled, prints out messages every time something is queued
 #undef PRINT_QUEUES
 // If this is enabled, prints out messages at the beginning and end of each battle
 #define PRINT_RESULTS
 // If this is enabled, prints out messages on every dodge and wait execution
-#undef PRINT_ALL_ACTIONS
+#define PRINT_ALL_ACTIONS
 
 // Types
 #define NO_TYPE 0
@@ -35,6 +35,9 @@
 #define TYPE_NOR 18
 #define NUM_TYPES 19
 
+// Number of bytes in the name buffers when reading moves / species
+#define BUFFER_SIZE 80U
+
 // 75 fully evolved, obtainable mons
 #define NUM_SPECIES 75
 // Maximum index used for a move
@@ -54,8 +57,8 @@
 #define MULT_STAB 1.25
 // Multiplier for Super Effective (1/x for Not Very Effective)
 #define MULT_SUPER 1.25
-// Dodging negates 75% of all damage
-#define MULT_DODGE 0.25
+// Dodging negates 75% of all damage (this is done in integer! No parentheses!)
+#define MULT_DODGE 1 / 4
 // Time taken to dodge
 #define DODGE_TIME 500
 // If we have to wait between our quick attack and the dodge, start dodge this many ms before
@@ -69,8 +72,10 @@
 #define ATK_HP_MULT 1
 // Attacker max NRG
 #define ATK_NRG_MAX 100
-// Delay time on defender
-#define DEF_DELAY 2000
+// Delay time on defender (min)
+#define DEF_DELAY 1500
+// Delay time on defender (range)
+#define DEF_DELAY_RANGE 1000
 // Defender HP multiplier
 #define DEF_HP_MULT 2
 // Defender max NRG
